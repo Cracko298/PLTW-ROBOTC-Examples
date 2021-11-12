@@ -20,10 +20,17 @@ while(1==1){                                    //*!! 1==1 means always true. bu
 	{
 		startMotor(servoMotor, 127);
 	}
+	else{
+		stopMotor(servoMotor);
+	}
 	if(SensorValue(limitSwitch) == 1)
 	{
 		startMotor(rightMotor, 127);
 		startMotor(leftMotor, 127);
+	}
+	else{
+		stopMotor(rightMotor);
+		stopMotor(leftMotor);
 	}
 }
 
