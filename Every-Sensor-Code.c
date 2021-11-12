@@ -15,25 +15,25 @@
 task main() //*!! Every Sensor Simple !!*//
 {
 
-while(1==1){            //*!! Every sensor should do something if it imediately starts when you run the code try tinkering with your hardware, and then tweek the code !!*//
+while(1==1)
+	  {            //*!! Every sensor should do something if it imediately starts when you run the code try tinkering with your hardware, and then tweek the code !!*//
 	if(SensorValue(bumpSwitch) == 1 || SensorValue(limitSwitch) == 1 || SensorValue(lightSensor) >= 500 || SensorValue(sonar) >= 12 || SensorValue(lineFollower) >= 1500)
-		{
+	  {
 		startMotor(leftMotor, 127);
 		startMotor(rightMotor, 127);            //*!! Should start every Motor/LED/Flashlight when one of the sensors are pressed !!*//
 		startMotor(servoMotor, 127);
 		turnFlashlightOn(flashlight, 100);
 		turnLEDOn(green);
 		startMotor(flashlight, 100);
-		}
+	  }
 	else
-	 {
+	  {
 		stopMotor(leftMotor);
 		stopMotor(rightMotor);
 		stopMotor(servoMotor);
 		turnFlashlightOff(flashlight);
 		turnLEDOff(green);
 		stopMotor(flashlight);
-	 }
-}
-
+	  }
+     }
 }
